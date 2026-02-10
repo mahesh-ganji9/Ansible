@@ -1,6 +1,7 @@
 ---
 - name: Print the variables
   hosts: local
+  connection: local
   vars_prompt:
     - name: username
       prompt: What is the username
