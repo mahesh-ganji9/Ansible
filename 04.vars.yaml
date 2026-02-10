@@ -1,5 +1,5 @@
 ---
-- name: print the variables
+- name: play level variables
   hosts: local
   connection: local
   tasks:
