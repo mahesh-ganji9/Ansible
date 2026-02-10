@@ -1,0 +1,12 @@
+---
+- name: print the variables
+  host: local
+  connection: local
+  tasks:
+    - name: print variables
+      vars:
+         COURSE: DEVOPS
+         DAYS: 140
+         TUTOR: Shiva
+      ansible.builtin.debug:
+          msg: I will Complete "{{ COURSE }}" in "{{ DAYS }}" days
