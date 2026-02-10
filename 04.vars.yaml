@@ -9,4 +9,4 @@
          DAYS: 140
          TUTOR: Shiva
       ansible.builtin.debug:
-          msg: I will Complete "{{ COURSE }}" in "{{ DAYS }}" days
+          msg: I will Complete {{ COURSE }} in {{ DAYS }} days
