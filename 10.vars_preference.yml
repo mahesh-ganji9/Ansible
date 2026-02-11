@@ -4,8 +4,8 @@
   connection: local
   vars:
    - Name: Ansible vars from play
-  vars_files:
-   - course.yaml
+  # vars_files:
+  #  - course.yaml
   vars_prompt:
    - name: Name
      prompt: enter your username
