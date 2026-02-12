@@ -8,4 +8,4 @@
    - name: boolean values
      ansible.builtin.debug:
        msg: "This is printed if IS_LIVE is true"
-       when: IS_Live
+     when: IS_Live
