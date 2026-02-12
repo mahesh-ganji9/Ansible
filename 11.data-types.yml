@@ -1,0 +1,24 @@
+---
+- name: demo on data types
+  hosts: local
+  connection: local
+  vars:
+    PROGRAM: "DEVSECOPS with AWS"  #String
+    Duration: 140 #int/number
+    IS_LIVE: true #bool
+    DETAILS: #map/Dictationary
+      months: 4
+      Trainer: "Siva Kumar"
+    TOPICS:
+       - Ansible
+       - docker
+       - k8s
+  tasks:
+    - name: variables
+      ansible.builtin.debug:
+        msg: |
+             program: {{ PROGRAM }} 
+             duration: {{ Duration }}
+             IS_LIVE?: {{ IS_LIVE }}
+             Details: {{ DETAILS }}
+             Topics: {{ TOPICS }}
