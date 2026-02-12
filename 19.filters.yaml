@@ -1,7 +1,12 @@
 - name: demo on filters
   hosts: local
   connection: local
+  vars:
+    name: Mahesh, devops, Test
   tasks:
    - name: Greeting
      ansible.builtin.debug: 
         msg: "Hi Mahesh {{ Greeting | default('Good Morning')}}"
+   - name: Convert String to List
+     ansible.builtin.debug:
+        msg: "{{ topics | split(',') }}"
