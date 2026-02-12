@@ -2,6 +2,7 @@
   hosts: local
   connection: local
   vars:
+    course: kubernetes
     details: Mahesh, devops, Test
     tagsMap:
       name: docker
@@ -40,3 +41,6 @@
    - name: convert yaml to json
      ansible.builtin.debug:
        msg: "{{ student_yaml | to_nice_json }}"
+   - name: convert to upper case
+     ansible.builtin.debug:
+       msg: "{{ course | upper }}"
