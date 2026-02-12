@@ -11,7 +11,7 @@
        msg: "{{ shell_output }}"
 
    - name: command module test
-     ansible.builtin.command: cat /etc/passwd | grep root 
+     ansible.builtin.command: df -h
      register: cmd_output
       
    - name: command output  
