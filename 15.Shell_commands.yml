@@ -1,0 +1,19 @@
+- name: gathering facts
+  hosts: local
+  connection: local
+  tasks:
+   - name: command module test
+     ansible.builtin.shell: cat /etc/passwd | grep root 
+     register: shell_output
+      
+   - name: command output  
+     ansible.builtin.debug:
+       msg: {{ shell_output }}
+
+   - name: command module test
+     ansible.builtin.command: cat /etc/passwd | grep root 
+     register: cmd_output
+      
+   - name: command output  
+     ansible.builtin.debug:
+       msg: {{ cmd_output }}
