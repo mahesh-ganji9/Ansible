@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    course: kubernetes
+    course: Kubernetes
     details: Mahesh, devops, Test
     tagsMap:
       name: docker
@@ -42,5 +42,8 @@
      ansible.builtin.debug:
        msg: "{{ student_yaml | to_nice_json }}"
    - name: convert to upper case
+     ansible.builtin.debug:
+       msg: "{{ course | upper }}"
+   - name: convert to lower case
      ansible.builtin.debug:
        msg: "{{ course | upper }}"
