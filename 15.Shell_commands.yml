@@ -8,7 +8,7 @@
       
    - name: command output  
      ansible.builtin.debug:
-       msg: {{ shell_output }}
+       msg: "{{ shell_output }}"
 
    - name: command module test
      ansible.builtin.command: cat /etc/passwd | grep root 
@@ -16,4 +16,4 @@
       
    - name: command output  
      ansible.builtin.debug:
-       msg: {{ cmd_output }}
+       msg: "{{ cmd_output }}"
