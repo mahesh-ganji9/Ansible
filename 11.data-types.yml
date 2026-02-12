@@ -5,7 +5,7 @@
   vars:
     PROGRAM: "DEVSECOPS with AWS"  #String
     Duration: 140 #int/number
-    IS_LIVE: true #bool
+    IS_LIVE: false #bool
     DETAILS: #map/Dictationary
       months: 4
       Trainer: "Siva Kumar"
