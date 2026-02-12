@@ -4,4 +4,4 @@
   tasks:
    - name: Greeting
      ansible.builtin.debug: 
-        msg: "Hi Mahesh {{ Greeting }}"
+        msg: "Hi Mahesh {{ Greeting | default('Good Morning')}}"
