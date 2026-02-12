@@ -3,7 +3,7 @@
   connection: local
   vars:
     details: Mahesh, devops, Test
-  tagsMap:
+    tagsMap:
       name: docker
       version: 1.21
       os: linux
