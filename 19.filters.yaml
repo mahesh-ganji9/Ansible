@@ -7,6 +7,20 @@
       name: docker
       version: 1.21
       os: linux
+    tagsList: [
+            {
+            "key": "name",
+            "value": "ansible"
+            },
+            {
+            "key": "project",
+            "value": "roboshop"
+            },
+           {
+            "key": "component",
+            "value": "catalogue"
+           }
+    ]
   tasks:
    - name: Greeting
      ansible.builtin.debug: 
@@ -16,4 +30,7 @@
         msg: "{{ details | split(',') }}"
    - name: Convert map to list
      ansible.builtin.debug:
-        msg: "{{ tagsMap | dict2items }}"
+        msg: "{{ tagsMap | dict2items }}" 
+   - name: Convert List to map
+     ansible.builtin.debug:
+        msg: "{{ tagsList | dict2list }}" 
